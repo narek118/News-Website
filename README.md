@@ -4,7 +4,7 @@ Getting Started
 ```
 bash (or cmd)
 
-The easiest way to get started is to clone the repository: Fuck
+The easiest way to get started is to clone the repository:
 
 # install mongodb and run
  
