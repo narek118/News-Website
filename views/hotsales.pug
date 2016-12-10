@@ -1,13 +1,14 @@
 extends layout
-
+head
+link(rel='stylesheet', type='text/css', href='hotsales.css')
 block content
   .page-header
     h3 Here you will find the best suggestions for you.
     h4 Categories
-   
+  
     ul.header
         li 
-            a(href='/', class=(title == 'Electronics') ? 'active' : undefined)  |: Electronics
+            a(href='/', class=(title == 'Electronics') ? 'active' : undefined)   Electronics
         li 
             a(href='/', class=(title == 'Cars') ? 'active' : undefined)  |: Cars
         li 
