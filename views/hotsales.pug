@@ -3,4 +3,20 @@ extends layout
 block content
   .page-header
     h3 Here you will find the best suggestions for you.
+    table(border='0')
+    thead
+        tr
+            th #
+            th Name
+            th Price
+            th Company
+    tbody
+        each item, i in items
+            tr
+                td= i+1
+                td= item.code
+                td= item.name
+                td= item.description
+    ul
+    	
   p Hot Sales !!!
