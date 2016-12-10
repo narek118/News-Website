@@ -5,13 +5,19 @@ block content
     h3 Here you will find the best suggestions for you.
     h4 Categories
    
-    ul#subjects
-        li a(href="#") Subject |: Electronics
-        li a(href="#") Subject |: Cars
-        li a(href="#") Subject |: Clothes
-        li a(href="#") Subject |: Computers & Office
-        li a(href="#") Subject |: Jewerly and Watches
-        li a(href="#") Subject |: Home & Garden,Furniture
+    ul.header
+        li 
+            a(href='/', class=(title == 'Electronics') ? 'active' : undefined)  |: Electronics
+        li 
+            a(href='/', class=(title == 'Cars') ? 'active' : undefined)  |: Cars
+        li 
+            a(href='/', class=(title == 'Clothes') ? 'active' : undefined)  |: Clothes
+        li 
+            a(href='/', class=(title == 'Computers and Office') ? 'active' : undefined)  |: Computers and Office
+        li 
+            a(href='/', class=(title == 'Jewerly and Watches') ? 'active' : undefined)  |: Jewerly and Watches
+        li 
+            a(href='/', class=(title == 'Home and Garden,Furniture') ? 'active' : undefined)  |: Home and Garden,Furniture
     
         
   p Hot Sales !!!
