@@ -9,7 +9,7 @@ block content
     h2 Here you will find the best suggestions for you.
     h3 Categories
   
-    ul.pull-left
+    ul.header
         li 
             a(href='/', class=(title == 'Electronics') ? 'active' : undefined)   Electronics
         li 
@@ -23,9 +23,9 @@ block content
         li 
             a(href='/', class=(title == 'Home and Garden,Furniture') ? 'active' : undefined)   Home and Garden,Furniture
     
-    p 
+    p.pull-right 
         | Have any sugestions? Write us             
 
         a(href='/contact', class=(title == 'here') ? 'active' : undefined) here.     
-    p
+    p.pull-right
         | Thank you for your feedback.
