@@ -4,3 +4,6 @@ ul {
 ul li:hover {
 	font-size: 30px;
 }
+a {
+	text-decoration: none;
+}
