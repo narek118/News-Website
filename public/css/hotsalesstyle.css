@@ -2,16 +2,12 @@ a {
 	text-decoration: none;
 }
 ul {
-	
 	list-style-type: none;
-}
-ul li{
-	font-size: 25px;
 }
 ul li:hover {
 	font-size: 30px;
 }
 ul li:visited {
 	font-size: 30px;
-	color: pink;
+	color: rgb(135, 0, 212);
 }
