@@ -2,6 +2,7 @@ a {
 	text-decoration: none;
 }
 ul {
+	font-size: 25
 	list-style-type: none;
 }
 ul li:hover {
