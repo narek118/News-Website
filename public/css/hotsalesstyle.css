@@ -1,9 +1,13 @@
+a {
+	text-decoration: none;
+}
 ul {
 	list-style-type: none;
 }
 ul li:hover {
 	font-size: 30px;
 }
-a {
-	text-decoration: none;
+ul li:visited {
+	font-size: 30px;
+	color: pink;
 }
