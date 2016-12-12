@@ -1,28 +1,9 @@
 extends layout
 
+
+
 block content
-h1 Sales site
-hr
-.row
-  ul
-    a(href='#l1')
-      li.l1 SAS
-    a(href='#l2')
-      li.l2 SAS
-    a(href='#l3')
-      li.l3 SAS
-    a(href='#l4')
-      li.l4 SAS
-    a(href='#l5')
-      li.l5 SAS
-    a(href='#l6')
-      li.l6 SAS
-    a(href='#l7')
-      li.l7 SAS
-    a(href='#l8')
-      li.l8 SAS
-    a(href='#l9')
-      li.l9 SAS
-    a(href='#l10')
-      li.l10 SAS
-    p It is gonna be a great site
+    h3 companies
+    - for(var i=0; i<8; i++)
+        .comp(href="#")
+          img.cmpLogo.pull-right(src="/img/armani.png")    
