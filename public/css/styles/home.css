@@ -1,0 +1,14 @@
+.armLogo {
+	height: 40px;
+	width: 40px;
+	float: right;
+}
+.cmp {
+	float: right;
+	font-family: sans-serif;
+	
+}
+.comp:hover {
+	background-color: #ccc222;
+	cursor: pointer;
+}
