@@ -1,33 +1,14 @@
 extends layout
 
 block styles
-    link(rel='stylesheet', href='/css/hotsalesstyle.css')
+    link(rel='stylesheet', href='/css/styles/hotsalesstyle.css')
 
 block content
+    h3 Hottest Suggestions for you
+    - for(var i=0; i<8; i++)
+        .item(href="#" )
+            h4 Cloth - 7$
+            .description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quid, si etiam iucunda memoria est praeteritorum malorum? Duo Reges: constructio interrete. 
+            span.sale.pull-right -5 %
+            img.cmpLogo.pull-left(src="/img/armani.png")
 
-    
-
-
-  .page-header
-    h2 Here you will find the best suggestions for you.
-    h3 Categories
-  
-    ul.header
-        li 
-            a(href='/', class=(title == 'Electronics') ? 'active' : undefined)   Electronics
-        li 
-            a(href='/', class=(title == 'Cars') ? 'active' : undefined)   Cars
-        li 
-            a(href='/', class=(title == 'Clothes') ? 'active' : undefined)   Clothes
-        li 
-            a(href='/', class=(title == 'Computers and Office') ? 'active' : undefined)   Computers and Office
-        li 
-            a(href='/', class=(title == 'Jewerly and Watches') ? 'active' : undefined)   Jewerly and Watches
-        li 
-            a(href='/', class=(title == 'Home and Garden,Furniture') ? 'active' : undefined)   Home and Garden,Furniture
-    
-    p.pull-left
-        | Have any sugestions? Write us             
-
-        a(href='/contact', class=(title == 'here') ? 'active' : undefined) here.     
-    
