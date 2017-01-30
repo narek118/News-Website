@@ -33,7 +33,7 @@ dotenv.load({ path: '.env.example' });
 const homeController = require('./controllers/home');
 const userController = require('./controllers/user');
 const contactController = require('./controllers/contact');
-const salesController = require('./controllers/sales')
+const resultController = require('./controllers/result');
 
 /**
  * API keys and Passport configuration.
@@ -127,12 +127,8 @@ app.get('/signup', userController.getSignup);
 app.post('/signup', userController.postSignup);
 app.get('/contact', contactController.getContact);
 app.post('/contact', contactController.postContact);
-app.get('/account', passportConfig.isAuthenticated, userController.getAccount);
-app.post('/account/profile', passportConfig.isAuthenticated, userController.postUpdateProfile);
-app.post('/account/password', passportConfig.isAuthenticated, userController.postUpdatePassword);
-app.post('/account/delete', passportConfig.isAuthenticated, userController.postDeleteAccount);
-app.get('/account/unlink/:provider', passportConfig.isAuthenticated, userController.getOauthUnlink);
-app.get('/hotsales', salesController.initialRendering);
+app.get('/results', resultController.index);
+app.get('/results/add', resultController.addGift);
 
 /**
  * OAuth authentication routes. (Sign in)

@@ -1,0 +1,25 @@
+.gift {
+	display: inline;
+	width:28%;
+	border-radius: 5px;
+	height:190px;
+	float:left;
+	margin:25px;
+	padding:5px;
+	background-color:#ccc;
+}
+
+.gift:hover {
+	background-color:rgba(173, 166, 146, 0.6);
+	transition: 0.5s;
+	cursor: pointer;
+}
+
+
+.gift:hover h4{
+	color:#fff;
+}
+
+.gift h4 {
+	text-align: center;
+}

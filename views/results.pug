@@ -1,0 +1,17 @@
+extends layout
+
+block styles
+	link(rel='stylesheet', href='/css/styles/results.css')
+
+block content
+	#content
+		header
+			h1 Արդյունքներ
+			h6 Դուք փնտրում եք նվեր #{info.age} տարեկան մարդու համար․
+
+		- for (var i = 0; i < 12; i++)
+			.gift(style="position:relative;") 
+				h4 Մատանի
+				img(src='/img/matani.png' style="width:40%; margin:0 auto")
+				span(style="position:absolute; top:37px; padding:7px") Մատնեմատի արծաթե մատանին հանգստություն կբերի Ձեզ, բոլոր գործերը կմղվեն երկրորդ պլան, և Դուք կփորձեք ...	
+				a(style="position:absolute; bottom:4px; right:7px") պատվիրել >

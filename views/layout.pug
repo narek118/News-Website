@@ -6,16 +6,16 @@ html
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
     meta(name='theme-color' content='#4DA5F4')
     meta(name='csrf-token', content=_csrf)
-    title #{title} - Sales
-    link(rel='shortcut icon', href='/favicon.png')
+    title Նվեր․am փնտրում 
+    //- #{title} - 
+    link(rel='shortcut icon', href='/img/logo.png')
     link(rel='stylesheet', href='/css/main.css')
     block styles  
   body
+    div#black
     include partials/header
-
-    .container
-      include partials/flash
-      block content
+    include partials/flash
+    block content
 
     include partials/footer
 
