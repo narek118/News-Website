@@ -19,14 +19,9 @@ exports.addGift = (req, res, next) => {
 	  picture: req.file.originalname
 	})
 
-	gift.save((err, user) => {
-		console.log(err);
-		console.log(user);
+	gift.save((err, gift) => {
+		if(err) res.send(err);
+		res.send({info: 'Mercy ավելացնելու համար ;) ', info:gift})
 	})
-	// let gift = new Gift;
-	// gift.name = req.query.name;
-	// gift.save((err, data) => {
-	// 	console.log(data);
-	// 	res.send(data)
-	// })
+
 };	
