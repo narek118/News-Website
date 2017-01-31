@@ -9,9 +9,9 @@ block content
 			h1 Արդյունքներ
 			h6 Դուք փնտրում եք նվեր #{info.age} տարեկան մարդու համար․
 
-		- for (var i = 0; i < 12; i++)
+		- for (var i = 0; i < res.length; i++)
 			.gift(style="position:relative;") 
-				h4 Մատանի
-				img(src='/img/matani.png' style="width:40%; margin:0 auto")
-				span(style="position:absolute; top:37px; padding:7px") Մատնեմատի արծաթե մատանին հանգստություն կբերի Ձեզ, բոլոր գործերը կմղվեն երկրորդ պլան, և Դուք կփորձեք ...	
+				h4 #{res[i].name} (#{res[i].price}դ․)
+				img(src='/uploads/'+ res[i].picture, style="width:40%; margin:0 auto")
+				span(style="position:absolute; top:50px; padding:10px") #{res[i].description}
 				a(style="position:absolute; bottom:4px; right:7px") պատվիրել >

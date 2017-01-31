@@ -1,0 +1,42 @@
+extends layout
+
+block styles
+
+block content
+	#content
+		header
+			h1 Ավելացնել նվեր
+		form#admin(action='/api/upload' method='post', enctype="multipart/form-data" style="text-align:center") 
+			input(type='text' name='name' id="login") 
+			br
+			| Անուն
+			br
+			input(type='text' name='price')
+			br
+			| Գին (դրամ, նաև սենց(500-1000))  
+			h3 Գործակիցներ(1-20)
+			br  
+			input(type='number' name='romantic' max="20" id='asdasd') 
+			br
+			| Ռոմանտիկ  
+			br  
+			input(type='number' name='original' max="20")
+			br  
+			| Օրիգինալ  
+			br  
+			input(type='number' name='surprise' max="20")
+			br  
+			| Սյուրպրիզ     
+			br  
+			input(type='number' name='joke' max="20")
+			br  
+			| Կատակ     
+			br  
+			textarea(name='description')
+			br  
+			| Կարճ նկարագրություն     
+			br
+			input(type="file", name="myFile") 
+			br  
+			br
+			button(type="submit" value="Submit") Ավելացնել  

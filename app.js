@@ -20,7 +20,17 @@ const expressStatusMonitor = require('express-status-monitor');
 const sass = require('node-sass-middleware');
 const multer = require('multer');
 
-const upload = multer({ dest: path.join(__dirname, 'uploads') });
+var storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+        cb(null, path.join(__dirname, 'public/uploads'))
+    },
+    filename: function (req, file, cb) {
+        cb(null, file.originalname)
+    }
+});
+
+
+const upload = multer({ storage: storage });
 
 /**
  * Load environment variables from .env file, where API keys and passwords are configured.
@@ -34,7 +44,7 @@ const homeController = require('./controllers/home');
 const userController = require('./controllers/user');
 const contactController = require('./controllers/contact');
 const resultController = require('./controllers/result');
-
+const adminController = require('./controllers/admin');
 /**
  * API keys and Passport configuration.
  */
@@ -83,13 +93,13 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(flash());
-app.use((req, res, next) => {
-  if (req.path === '/api/upload') {
-    next();
-  } else {
-    lusca.csrf()(req, res, next);
-  }
-});
+// app.use((req, res, next) => {
+//   if (req.path === '/api/upload') {
+//     next();
+//   } else {
+//     lusca.csrf()(req, res, next);
+//   }
+// });
 app.use(lusca.xframe('SAMEORIGIN'));
 app.use(lusca.xssProtection(true));
 app.use((req, res, next) => {
@@ -128,8 +138,9 @@ app.post('/signup', userController.postSignup);
 app.get('/contact', contactController.getContact);
 app.post('/contact', contactController.postContact);
 app.get('/results', resultController.index);
-app.get('/results/add', resultController.addGift);
-
+app.get('/admin', adminController.index);
+app.post('/admin/add', adminController.addGift);
+app.post('/api/upload', upload.single('myFile'), adminController.addGift);
 /**
  * OAuth authentication routes. (Sign in)
  */

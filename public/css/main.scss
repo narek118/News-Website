@@ -37,6 +37,12 @@ header h1{
   margin:0 auto;
 }
 
+#admin {
+  input {
+  margin-top: 7px;
+  }
+}
+
 
 #content {
   width: 79%;
@@ -92,9 +98,6 @@ footer {
 // Input Fields
 // -------------------------
 
-textarea {
-  resize: vertical;
-}
 
 // Navbar
 // -------------------------

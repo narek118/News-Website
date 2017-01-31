@@ -2,11 +2,13 @@ const mongoose = require('mongoose');
 
 const giftSchema = new mongoose.Schema({
   name: { type: String, unique: true },
-  price: Number,
+  price: String,
   romantic: Number,
   original: Number,
   surprise: Number,
   joke: Number,
+  description: String,
+  picture: String
 });
 
 
