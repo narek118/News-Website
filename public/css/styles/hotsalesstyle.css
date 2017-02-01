@@ -10,17 +10,17 @@ body {
 
 header {
 	text-align:center;
-	color:#fff;
+	color:#000;
 }
 
 header h1{
-	color:#fff;
+	color:#000;
 	width:80%;
 	margin:0 auto;
 }
 
 #all h5{
-	color:#fff;
+	color:#000;
 }
 
 .select {
