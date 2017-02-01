@@ -1,5 +1,8 @@
 const Gift = require('../models/Gift');
 
+let Promise = require("bluebird");
+Promise.promisifyAll(require("mongoose"));
+
 exports.index = (req, res) => {
   res.render('admin', {
     title: 'Ադմինո'
@@ -20,8 +23,13 @@ exports.addGift = (req, res, next) => {
 	})
 
 	gift.save()
-	.then(res1 => {
-		console.log('olaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', res1)
-		return res.send(res1);
+	.then(reso => {
+		console.log(reso);
+		res.send('fuckk')
 	})
+	.catch(err => {
+		console.log(err);
+		res.send(err);
+	})
+	
 };	
