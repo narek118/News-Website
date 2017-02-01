@@ -25,7 +25,7 @@ exports.addGift = (req, res, next) => {
 	gift.save()
 	.then(reso => {
 		console.log(reso);
-		res.send('fuckk')
+		res.send('Mersiiiiiiiiii avelacnelu hamar')
 	})
 	.catch(err => {
 		console.log(err);
