@@ -20,7 +20,6 @@ exports.addGift = (req, res, next) => {
 	})
 
 	gift.save((err, gift) => {
-		if(err) return res.end(err);
 		return res.send({info: 'Mercy ավելացնելու համար ;) ', info:gift})
 	})
 
