@@ -19,8 +19,9 @@ exports.addGift = (req, res, next) => {
 	  picture: req.file.originalname
 	})
 
-	gift.save((err, gift) => {
-		return res.send({info: 'Mercy ավելացնելու համար ;) ', info:gift})
+	gift.save()
+	.then(res1 => {
+		console.log('olaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', res1)
+		return res.send(res1);
 	})
-
 };	
