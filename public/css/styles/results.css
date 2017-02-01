@@ -10,7 +10,7 @@
 }
 
 .gift:hover {
-	background-color:rgba(173, 166, 146, 0.6);
+	background-color:rgba(173, 166, 146, 0.8);
 	transition: 0.5s;
 	cursor: pointer;
 }

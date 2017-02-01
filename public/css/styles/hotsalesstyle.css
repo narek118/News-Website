@@ -8,30 +8,20 @@ body {
 	text-align: center;
 }
 
-header {
-	text-align:center;
-	color:#000;
-}
-
-header h1{
-	color:#000;
-	width:80%;
-	margin:0 auto;
-}
 
 #all h5{
-	color:#000;
+	margin-bottom: 0px;	
 }
 
 .select {
+	color:black;
+	font-size: 17.5px;
 	width:150px;
 	opacity: 0.8;
 	padding:15px;
 	border-radius: 15px;
 	margin:20px;
 }
-
-
 
  button.select{
 	font-size: 22px;
